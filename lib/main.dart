@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_examples/Stack%20DataStructure/pushNamed/home_page.dart';
+// import 'package:flutter_examples/Stack%20DataStructure/pushNamed/home_page.dart';
 // import 'package:flutter_examples/LifeCycle/StateFlutterApplication/login_page.dart';
 // import 'package:flutter_examples/LifeCycle/DidChangeDependencies/sample_widget.dart';
 // import 'package:flutter_examples/Array%20DataStructure/provider/list_item_provider.dart';
@@ -13,7 +13,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 // import 'Array DataStructure/list_item.dart';
 // import 'LifeCycle/DidUpdateWidget/parent_widget.dart';
-import 'LifeCycle/Deactivate/animated_demo.dart';
+// import 'LifeCycle/Deactivate/animated_demo.dart';
+import 'Array DataStructure/list_item.dart';
 import 'Stack DataStructure/pushNamed/display_page.dart';
 // import 'Stack DataStructure/pushNamed/home_page.dart';
 // import 'list_demo.dart';
@@ -36,11 +37,11 @@ class MyApp extends StatelessWidget {
       //   '/second': (context) => const SecondPage(),
       // },
 
-      home: const HomePage(),
+      home: const ListItem(),
       routes: {
         'display': (context) => const DisplayPage(),
       },
-      
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
     );
   }
 }

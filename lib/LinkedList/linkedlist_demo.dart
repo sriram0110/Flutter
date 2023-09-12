@@ -5,7 +5,7 @@ class Node {
   Node(this.data, this.next);
 }
 
-class LinkedList {
+class LinkedList {    //instead of creating node obj manually, use linkedlist
   Node? head; //initially points to null
 
   void insert(int data) {
@@ -15,10 +15,12 @@ class LinkedList {
       head = newNode;
     } else {
       Node temp = head!;
+      // int count = 1;
       while (temp.next != null) { //iterates to check last node
         temp = temp.next!;
+        // count+=1;
       }
-      temp.next = newNode;
+      temp.next = newNode;  //pointing previous node to the new node
     }
   }
 
@@ -31,7 +33,7 @@ class LinkedList {
   }
 }
 
-void main() {
+void main() { 
   LinkedList linkedList = LinkedList();
   linkedList.insert(1);
   linkedList.insert(2);

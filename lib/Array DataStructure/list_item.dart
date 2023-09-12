@@ -20,13 +20,20 @@ class ListItem extends StatelessWidget {
           final itemList = ref.watch(listItemProvider);
 
           var content = const Center(
-            child:  Column(
+            child: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                 Text('No Items Found', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                 SizedBox(height: 10,),
-                 Text('Click + to add an item', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500)),
+                Text(
+                  'No Items Found',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text('Click + to add an item',
+                    style:
+                        TextStyle(fontSize: 14, fontWeight: FontWeight.w500)),
               ],
             ),
           );
@@ -40,7 +47,11 @@ class ListItem extends StatelessWidget {
             itemBuilder: (context, index) {
               return ListTile(
                 title: Text(
-                  itemList[index],
+                  itemList[index].name,
+                ),
+                subtitle: Text(
+                  itemList[index].price.toString(),
+                  style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
                 trailing: IconButton(
                   onPressed: () {
